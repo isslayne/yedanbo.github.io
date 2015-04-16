@@ -1510,6 +1510,11 @@ pre .javascript .function {
     color: #fff;
   }
 }
+@media all and (max-width: 601px) {
+  .widget-wrap {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   #sidebar {
     display: inline;
