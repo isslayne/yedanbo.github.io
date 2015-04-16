@@ -25,10 +25,10 @@
         '<div id="' + id + '" class="article-share-box">',
           '<input class="article-share-input" value="' + url + '">',
           '<div class="article-share-links">',
-            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+            '<a href="http://v.t.sina.com.cn/share/share.php?title=' + encodedUrl + '" class="fa fa-weibo article-share-google" target="_blank" title="新浪微博"></a>',
+            '<a href="http://share.renren.com/share/buttonshare?link=' + encodedUrl + '" class="fa fa-renren article-share-facebook" target="_blank" title="人人网"></a>',
+            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="fa fa-qq article-share-twitter" target="_blank" title="QQ空间"></a>',
+            '<a href="http://v.t.qq.com/share/share.php?title=' + encodedUrl + '" class="fa fa-tencent-weibo article-share-twitter" target="_blank" title="腾讯微博"></a>',
           '</div>',
         '</div>'
       ].join('');
@@ -104,3 +104,18 @@
   });
 
 })(jQuery);
+
+
+
+function WeiXinShareBtn() { 
+ if (typeof WeixinJSBridge == "undefined") { 
+ alert("请先通过微信搜索 wow36kr 添加36氪为好友，通过微信分享文章 "); 
+ } else { 
+ WeixinJSBridge.invoke('shareTimeline', { 
+ "title": "36氪", 
+ "link": "http://www.36kr.com", 
+ "desc": "关注互联网创业", 
+ "img_url": "http://www.36kr.com/assets/images/apple-touch-icon.png" 
+ }); 
+ } 
+ }

@@ -660,7 +660,6 @@ a:visited {
   display: block;
   font-size: 14px;
   text-transform: uppercase;
-  border-right: 1px solid #eceff2;
 }
 #profile .inner .contact-info .contact-list {
   width: 100%;
