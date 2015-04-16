@@ -1515,6 +1515,11 @@ pre .javascript .function {
     display: none;
   }
 }
+@media all and (max-width: 601px) {
+  #toTop {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   #sidebar {
     display: inline;
